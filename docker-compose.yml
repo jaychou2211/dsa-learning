@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  dsa-python:
+    build: .
+    volumes:
+      - .:/dsa-learning
+    working_dir: /dsa-learning
+    stdin_open: true
+    tty: true
+    command: /bin/bash
