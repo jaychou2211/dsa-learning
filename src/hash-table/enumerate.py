@@ -1,3 +1,5 @@
+# reference: example-01.py
+
 # enumerate() 是 Python 的一個內建函數，
 # 它可以同時獲取迭代對象的索引和值。
 # 讓我用幾個簡單的例子來說明：
