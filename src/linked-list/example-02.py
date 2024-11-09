@@ -1,11 +1,7 @@
 # LeetCode #21: Merge Two Sorted Lists
 
 from typing import Optional
-
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+from utils import create_linked_list, print_linked_list, ListNode
 
 # https://imgur.com/Jjdqi1x
 class Solution:
@@ -31,26 +27,6 @@ class Solution:
 
 # 時間複雜度：O(n + m)，其中 n 和 m 是兩個串列的長度
 # 空間複雜度：O(1)，只使用固定的額外空間
-
-
-# 測試用例
-def create_linked_list(arr):
-    if not arr:
-        return None
-    head = ListNode(arr[0])
-    curr = head
-    for val in arr[1:]:
-        curr.next = ListNode(val)
-        curr = curr.next
-    return head
-
-def print_linked_list(head):
-    values = []
-    curr = head
-    while curr:
-        values.append(str(curr.val))
-        curr = curr.next
-    return "->".join(values)
 
 # 測試
 test_cases = [

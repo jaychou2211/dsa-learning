@@ -56,10 +56,7 @@
 
 ## 3. Python 實作
 # Definition for singly-linked list.
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+from utils import create_linked_list, print_linked_list
 
 # 方法一：迭代
 # https://i.imgur.com/bICVnHy.jpeg
@@ -93,25 +90,6 @@ def reverseList_recursive(head):
     head.next = None
     
     return new_head
-
-# 測試用例
-def create_linked_list(arr):
-    if not arr:
-        return None
-    head = ListNode(arr[0])
-    curr = head
-    for val in arr[1:]:
-        curr.next = ListNode(val)
-        curr = curr.next
-    return head
-
-def print_linked_list(head):
-    values = []
-    curr = head
-    while curr:
-        values.append(str(curr.val))
-        curr = curr.next
-    return "->".join(values)
 
 # 測試
 test_cases = [
